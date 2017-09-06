@@ -9,9 +9,10 @@ int main(void) {
     pid_t pid;
     int rv;
 
-    // after fork(), the whole switch statement is gonna be run 2 times, think about it
-    // on success, pid of the child process is returned in the parent
-    // and 0 is returned in the child
+    // after fork(), there is 2 instances of your program running.
+    // after fork(), pid of the child process is returned in the parent process
+    // in the child process, fork() just returns 0
+    // https://stackoverflow.com/questions/15102328/how-does-fork-work
     switch(pid = fork()) {
         case -1:
             perror("fork");
