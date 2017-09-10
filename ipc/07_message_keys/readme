@@ -1,0 +1,16 @@
+A message queue works kind of like a FIFO, but supports some additional 
+functionality. Generally, see, messages are taken off the queue in the order 
+they are put on. Specifically, however, there are ways to pull certain messages 
+out of the queue before they reach the front.
+
+Most important functions:
+
+1. Connect to (create) a queue:
+int msgget(key_t key, int msgflg);
+
+
+2. Handling keys
+
+3. Sending to the queue
+
+4. Receiving from the queue
